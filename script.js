@@ -1,3 +1,11 @@
+function display(message) {
+  document.getElementById(message).style.display = 'block' 
+  setTimeout(()=>{
+    document.getElementById(message).style.display = 'none'
+  }, 1500);
+
+}
+
 function validation(cpf) {
   if(cpf.length != 11) {
     return false;
@@ -28,17 +36,14 @@ function validation(cpf) {
 }
 
 function checkCPF() {
-  document.getElementById('success').style.display = 'none';
-  document.getElementById('error').style.display = 'none';
-  
-  
+
   const cpf = document.getElementById('typed_cpf').value; 
   const isCPF = validation(cpf);
 
   if(isCPF) {
-    document.getElementById('success').style.display = 'block';
+    display('success')
   }
   else {
-    document.getElementById('error').style.display = 'block';
+    display('error')
   }
 }

@@ -40,18 +40,19 @@
                         aria-describedby="sizing-addon1">
                 </div>
                 <small class="form-text text-muted">Digite somente numeros</small>
+                <div class="container page-header">
+                    <div id="success" class="alert alert-success" style="display: none;" role="alert">
+                        <strong>Oba!</strong> Seu CPF é válido
+                    </div>
+                    <div id="error" class="alert alert-danger" style="display: none;" role="alert">
+                        <strong>Ops!</strong> Seu CPF não é válido
+                    </div>
+                </div>
             </div>
             <button onclick="checkCPF()" type="button" class="btn btn-info">Validar !</button>
         </form>
     </div>
-    <div class="container page-header">
-        <div id="success" class="alert alert-success" style="display: none;" role="alert">
-            <strong>Oba!</strong> Seu CPF é válido
-        </div>
-        <div id="error" class="alert alert-danger" style="display: none;" role="alert">
-            <strong>Ops!</strong> Seu CPF não é válido
-        </div>
-    </div>
+
 
 </body>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
